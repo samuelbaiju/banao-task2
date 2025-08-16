@@ -5,6 +5,13 @@ It runs locally using `serverless-offline` and allows sending emails by making a
 
 ---
 
+📂 Clone the Repository
+# Clone the repo
+git clone https://github.com/email-api/banao-task2.git
+
+# Move into the project folder
+cd email-api
+
 ## 🚀 Features
 - Built with **Python** and the **Serverless Framework**
 - Run locally with `serverless-offline`
@@ -29,19 +36,21 @@ yaml
 ## ⚙️ Setup & Installation
 
 ### 1️⃣ Install Serverless Framework
-```bash
+1. Install Serverless Framework
 npm install -g serverless
-2️⃣ Install Local Plugins
-Inside the project folder:
 
+2. Initialize NPM (for Serverless plugins)
+npm init -y
 
-npm install
-3️⃣ Install Python Dependencies
+3. Install required Serverless plugins
+npm install --save serverless-offline serverless-python-requirements
 
+4. Install Python dependencies
 pip install -r requirements.txt
-4️⃣ Run Locally
 
+5. Start serverless-offline
 serverless offline
+
 📤 Usage
 Endpoint:
 
