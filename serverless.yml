@@ -1,0 +1,19 @@
+service: email-service
+
+provider:
+  name: aws
+  runtime: python3.9
+  environment:
+    SMTP_EMAIL: workforsamuel298@gmail.com
+    SMTP_PASSWORD: psyz tniy mhcz wjpg
+
+plugins:
+  - serverless-offline
+
+functions:
+  sendEmail:
+    handler: handler.send_email
+    events:
+      - http:
+          path: send-email
+          method: post
